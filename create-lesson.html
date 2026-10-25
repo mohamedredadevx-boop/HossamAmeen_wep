@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta name="description" content="أدوات داخلية لإضافة وتعديل الدروس.">
+    <meta property="og:title" content="إدارة الدروس | مستر حسام أمين">
+    <meta property="og:description" content="أدوات داخلية لإضافة وتعديل الدروس.">
+    <meta property="og:type" content="noindex">
+    <meta property="og:locale" content="ar_EG">
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>إدارة الدروس | مستر حسام أمين</title>
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="icon" type="image/jpeg" href="assets/platform-logo.jpeg"><link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <header class="topbar container">
+        <meta name="description" content="أدوات داخلية لإضافة وتعديل الدروس.">
+        <meta property="og:title" content="إدارة الدروس | مستر حسام أمين">
+        <meta property="og:description" content="أدوات داخلية لإضافة وتعديل الدروس.">
+        <meta property="og:type" content="noindex">
+        <meta property="og:locale" content="ar_EG">
+        <meta name="robots" content="noindex, nofollow">
+        <div class="nav"><a class="brand" href="index.html"><img class="brand-logo" src="assets/platform-logo.jpeg" alt="شعار منصة مستر حسام أمين"><span>مستر حسام
+                    أمين<small>بوابتك للتفوق</small></span></a><button class="menu-toggle" aria-label="فتح القائمة"
+                aria-expanded="false">☰</button>
+            <nav class="nav-links"><a href="teacher-dashboard.html">لوحة المدرس</a><a href="courses.html">الكورسات</a>
+            </nav>
+            <div class="nav-actions"><a class="btn btn-primary" href="profile.html">ملفي</a></div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="page-heading">
+            <div class="breadcrumbs"><a href="teacher-dashboard.html">لوحة المدرس</a> / إدارة المحاضرات</div>
+            <h1>إدارة المحاضرات</h1>
+            <p class="lead">أضف محاضرة فيديو، ويمكنك إرفاق ملف PDF اختياريًا، أو حدّث درسًا موجودًا.</p>
+        </section>
+        <section class="form-wrap">
+            <form class="form-card" id="lessonForm">
+                <div class="notice"></div><label class="field"><span>الكورس</span><select required name="courseId"
+                        id="lessonCourseSelect"></select></label><label class="field"><span>تعديل درس
+                        موجود</span><select name="lessonId" id="lessonSelect">
+                        <option value="">إضافة محاضرة جديدة</option>
+                    </select></label><label class="field"><span>عنوان الدرس</span><input required name="title"
+                        placeholder="عنوان المحاضرة"></label><label class="field"><span>رابط YouTube أو Vimeo أو فيديو
+                        مباشر HTTPS</span><input id="lessonVideoUrl" type="url" inputmode="url"
+                        placeholder="https://youtu.be/... أو https://vimeo.com/..."></label><label
+                    class="field"><span>أو ارفع فيديو MP4/WebM (حتى 50 MB)</span><input id="lessonVideo" type="file"
+                        accept="video/mp4,video/webm"></label><label class="field"><span>ملف PDF اختياري (حتى 50
+                        MB)</span><input id="lessonPdf" type="file" accept="application/pdf"></label><label
+                    class="field"><span>عدد مرات المشاهدة</span><input type="number" name="maxViews" value="3" min="1"
+                        max="20"></label><label class="field"><span>الإتاحة</span><select name="isFree">
+                        <option value="false">للمشتركين في الكورس</option>
+                        <option value="true">درس مجاني</option>
+                    </select></label>
+                <section class="content-card" style="margin:18px 0">
+                    <h2>اختبار المحاضرة</h2>
+                    <p class="lead" style="font-size:14px">أضف أسئلة اختيار من متعدد. لن تظهر النتيجة للطالب إلا بعد الإجابة عن كل الأسئلة.</p>
+                    <div id="lessonQuizQuestions"></div>
+                    <button class="btn btn-secondary" id="lessonAddQuestion" type="button">إضافة سؤال</button>
+                </section>
+                <div class="form-grid"><button class="btn btn-primary" type="submit">حفظ المحاضرة</button><button
+                        class="btn btn-soft" id="deleteLessonButton" type="button" hidden>حذف المحاضرة</button></div>
+            </form>
+        </section>
+    </main>
+    <script src="assets/app.js"></script>
+</body>
+
+</html>

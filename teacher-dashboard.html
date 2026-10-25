@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#faf9f2"><meta name="description" content="إدارة الكورسات والدروس والامتحانات في منصة مستر حسام أمين."><meta property="og:title" content="لوحة المدرس | مستر حسام أمين"><meta property="og:description" content="إدارة الكورسات والدروس والامتحانات في منصة مستر حسام أمين."><meta property="og:type" content="noindex"><meta property="og:locale" content="ar_EG"><meta name="robots" content="noindex, nofollow"><title>لوحة المدرس | مستر حسام أمين</title><link rel="stylesheet" href="assets/bootstrap.min.css"><link rel="icon" type="image/jpeg" href="assets/platform-logo.jpeg"><link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header class="topbar container">
+  <div class="nav">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/platform-logo.jpeg" alt="شعار منصة مستر حسام أمين"><span>مستر حسام أمين<small>بوابتك للتفوق</small></span></a>
+    <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="القائمة الرئيسية">
+      <a href="index.html" data-nav="index.html">الرئيسية</a>
+      <a href="courses.html" data-nav="courses.html">الكورسات</a>
+      <a href="create-course.html" data-nav="create-course.html">إنشاء كورس</a>
+    </nav>
+    <div class="nav-actions"><button class="icon-btn" id="darkToggle" aria-label="الوضع الليلي">☾</button><button class="icon-btn" id="langToggle" aria-label="تغيير اللغة">EN</button><a class="btn btn-primary" href="profile.html">ملفي</a></div>
+  </div>
+</header>
+<main class="container">
+<section class="page-heading"><div class="breadcrumbs"><a href="index.html">الرئيسية</a> / لوحة المدرس</div><h1>لوحة المدرس</h1><p class="lead">أنشئ الكورسات وشارك كود كل كورس مع الطلاب، وأضف فيديو وPDF وأسئلة لكل درس.</p></section>
+<section class="stats-grid"><article class="stat-card"><div><div class="stat-num">كورس</div><div class="stat-label">إنشاء ونشر المحتوى</div></div><span class="stat-icon">🎓</span></article><article class="stat-card"><div><div class="stat-num">PDF</div><div class="stat-label">ملف مرافق لكل درس</div></div><span class="stat-icon">📄</span></article><article class="stat-card"><div><div class="stat-num">3</div><div class="stat-label">حد المشاهدة الافتراضي</div></div><span class="stat-icon">▶</span></article></section>
+<section class="section"><a class="btn btn-primary" href="create-course.html">إنشاء كورس جديد ↗</a> <a class="btn btn-secondary" href="student-progress.html">متابعة الطلاب وإدارة الحسابات</a></section><section class="section"><div class="section-head"><div><span class="eyebrow">طلبات الطلاب</span><h2>طلبات الالتحاق بالكورسات</h2></div></div><div class="content-card" id="courseRequests"></div></section>
+</main>
+<footer class="footer"><div class="container footer-inner"><div>© <span id="year">2026</span> مستر حسام أمين — جميع الحقوق محفوظة</div><div class="footer-links"><a href="create-course.html">إنشاء كورس</a><a href="courses.html">الكورسات</a><a href="profile.html">ملفي</a></div></div></footer>
+<a class="chat-fab" href="https://wa.me/qr/B5MWFXGZ3OQQL1" target="_blank" rel="noopener noreferrer" aria-label="تواصل مع المدرس عبر واتساب" title="تواصل مع المدرس عبر واتساب">☏</a>
+<div id="toast" class="notice" style="position:fixed;bottom:90px;left:22px;z-index:35;box-shadow:var(--shadow);max-width:300px"></div>
+<script src="assets/app.js"></script>
+
+<script>
+const current = location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('[data-nav]').forEach(a => { if(a.dataset.nav === current) a.classList.add('active'); });
+</script></body></html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#faf9f2"><meta name="description" content="تواصل مع فريق منصة مستر حسام أمين للاستفسار عن الكورسات والدروس وخدمات المنصة التعليمية."><meta property="og:title" content="تواصل مع منصة مستر حسام أمين"><meta property="og:description" content="تواصل مع فريق منصة مستر حسام أمين للاستفسار عن الكورسات والدروس وخدمات المنصة التعليمية."><meta property="og:type" content="website"><meta property="og:locale" content="ar_EG"><!--SEO_CANONICAL--><title>تواصل مع منصة مستر حسام أمين</title><link rel="stylesheet" href="assets/bootstrap.min.css"><link rel="icon" type="image/jpeg" href="assets/platform-logo.jpeg"><link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header class="topbar container">
+  <div class="nav">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/platform-logo.jpeg" alt="شعار منصة مستر حسام أمين"><span>مستر حسام أمين<small>بوابتك للتفوق</small></span></a>
+    <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="القائمة الرئيسية">
+      <a href="index.html" data-nav="index.html">الرئيسية</a>
+      <a href="courses.html" data-nav="courses.html">الكورسات</a>
+      <a href="lessons.html" data-nav="lessons.html">المحاضرات</a>
+      <a href="exams.html" data-nav="exams.html">الامتحانات</a>
+      <a href="about.html" data-nav="about.html">من نحن</a>
+      <a href="contact.html" data-nav="contact.html">تواصل معنا</a>
+    </nav>
+    <div class="nav-actions"><button class="icon-btn" id="darkToggle" aria-label="الوضع الليلي">☾</button><button class="icon-btn" id="langToggle" aria-label="تغيير اللغة">EN</button><a class="btn btn-primary" href="login.html">دخول الطلاب ↗</a></div>
+  </div>
+</header>
+<main class="container">
+<section class="page-heading"><div class="breadcrumbs"><a href="index.html">الرئيسية</a> / تواصل معنا</div><h1>إحنا هنا عشان نساعدك</h1><p class="lead">عندك سؤال عن الكورسات أو محتاج مساعدة؟ ابعتلنا رسالتك.</p></section>
+<div class="two-col"><form class="content-card" id="contactForm"><h2>ابعت رسالتك</h2><div class="notice"></div><label class="field"><span>الاسم</span><input required name="name" placeholder="اكتب اسمك"></label><label class="field"><span>البريد الإلكتروني</span><input required type="email" name="email" placeholder="name@example.com"></label><label class="field"><span>موضوع الرسالة</span><select name="subject"><option>استفسار عن كورس</option><option>مشكلة تقنية</option><option>استفسار عام</option></select></label><label class="field"><span>رسالتك</span><textarea required rows="4" name="message" placeholder="اكتب تفاصيل استفسارك..."></textarea></label><button class="btn btn-primary" type="submit">إرسال الرسالة ↗</button></form><aside class="content-card"><span class="eyebrow">تواصل مباشر</span><h2 style="margin-top:18px">خلينا نسمع منك</h2><div class="list-row"><span class="row-icon">✉️</span><div class="row-copy"><b>البريد الإلكتروني</b><small>استخدم النموذج لإرسال استفسارك إلى إدارة المنصة.</small></div></div><a class="list-row" href="https://wa.me/qr/B5MWFXGZ3OQQL1" target="_blank" rel="noopener noreferrer" aria-label="التواصل مع المدرس عبر واتساب"><span class="row-icon">💬</span><div class="row-copy"><b>واتساب</b><small>اضغط هنا لبدء محادثة مع المدرس.</small></div></a><div class="list-row"><span class="row-icon">⏰</span><div class="row-copy"><b>مواعيد الرد</b><small>من السبت إلى الخميس</small></div></div><p style="color:var(--muted);font-size:12px;line-height:1.9">يتم حفظ رسالتك وإشعار إدارة المنصة. يتطلب إرسال نسخة إلى البريد إعداد خدمة SMTP.</p></aside></div>
+</main>
+<footer class="footer"><div class="container footer-inner"><div>© <span id="year">2026</span> مستر حسام أمين — جميع الحقوق محفوظة</div><div class="footer-links"><a href="courses.html">الكورسات</a><a href="about.html">عن المنصة</a><a href="contact.html">تواصل معنا</a><a href="login.html">دخول الطلاب</a></div></div></footer>
+<a class="chat-fab" href="https://wa.me/qr/B5MWFXGZ3OQQL1" target="_blank" rel="noopener noreferrer" aria-label="تواصل مع المدرس عبر واتساب" title="تواصل مع المدرس عبر واتساب">☏</a>
+<div id="toast" class="notice" style="position:fixed;bottom:90px;left:22px;z-index:35;box-shadow:var(--shadow);max-width:300px"></div>
+<script src="assets/app.js"></script>
+
+<script>
+const current = location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('[data-nav]').forEach(a => { if(a.dataset.nav === current) a.classList.add('active'); });
+</script></body></html>
+

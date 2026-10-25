@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#faf9f2"><meta name="description" content="أنشئ حساب طالب لمتابعة كورسات الفيزياء والدروس والامتحانات على منصة مستر حسام أمين."><meta property="og:title" content="إنشاء حساب طالب | منصة مستر حسام أمين"><meta property="og:description" content="أنشئ حساب طالب لمتابعة كورسات الفيزياء والدروس والامتحانات على منصة مستر حسام أمين."><meta property="og:type" content="noindex"><meta property="og:locale" content="ar_EG"><meta name="robots" content="noindex, nofollow"><title>إنشاء حساب طالب | منصة مستر حسام أمين</title><link rel="stylesheet" href="assets/bootstrap.min.css"><link rel="icon" type="image/jpeg" href="assets/platform-logo.jpeg"><link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header class="topbar container">
+  <div class="nav">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/platform-logo.jpeg" alt="شعار منصة مستر حسام أمين"><span>مستر حسام أمين<small>بوابتك للتفوق</small></span></a>
+    <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="القائمة الرئيسية">
+      <a href="index.html" data-nav="index.html">الرئيسية</a>
+      <a href="courses.html" data-nav="courses.html">الكورسات</a>
+      <a href="lessons.html" data-nav="lessons.html">المحاضرات</a>
+      <a href="exams.html" data-nav="exams.html">الامتحانات</a>
+      <a href="about.html" data-nav="about.html">من نحن</a>
+      <a href="contact.html" data-nav="contact.html">تواصل معنا</a>
+    </nav>
+    <div class="nav-actions"><button class="icon-btn" id="darkToggle" aria-label="الوضع الليلي">☾</button><button class="icon-btn" id="langToggle" aria-label="تغيير اللغة">EN</button><a class="btn btn-primary" href="login.html">دخول الطلاب ↗</a></div>
+  </div>
+</header>
+<main class="container">
+<section class="form-wrap"><div class="breadcrumbs"><a href="index.html">الرئيسية</a> / إنشاء حساب</div><form class="form-card" id="registerForm"><div class="brand-icon">✨</div><h1>ابدأ رحلتك التعليمية</h1><p>أنشئ حسابك عشان تتابع الدروس والواجبات في مكان واحد.</p><div class="notice"></div><label class="field"><span>الاسم بالكامل</span><input required name="name" placeholder="اكتب اسمك"></label><label class="field"><span>البريد الإلكتروني</span><input required type="email" name="email" placeholder="name@example.com"></label><label class="field"><span>المرحلة الدراسية</span><select required name="grade"><option value="">اختر الصف</option><option value="first-secondary">الأول الثانوي</option><option value="second-secondary">الثاني الثانوي</option><option value="third-secondary">الثالث الثانوي</option></select></label><label class="field"><span>كلمة المرور</span><input required type="password" minlength="8" name="password" placeholder="8 أحرف على الأقل"></label><button class="btn btn-primary" type="submit">إنشاء الحساب ↗</button><div class="form-note">عندك حساب بالفعل؟ <a href="login.html" style="color:var(--orange);font-weight:900">سجّل دخولك</a></div></form></section>
+</main>
+<footer class="footer"><div class="container footer-inner"><div>© <span id="year">2026</span> مستر حسام أمين — جميع الحقوق محفوظة</div><div class="footer-links"><a href="courses.html">الكورسات</a><a href="about.html">عن المنصة</a><a href="contact.html">تواصل معنا</a><a href="login.html">دخول الطلاب</a></div></div></footer>
+<a class="chat-fab" href="https://wa.me/qr/B5MWFXGZ3OQQL1" target="_blank" rel="noopener noreferrer" aria-label="تواصل مع المدرس عبر واتساب" title="تواصل مع المدرس عبر واتساب">☏</a>
+<div id="toast" class="notice" style="position:fixed;bottom:90px;left:22px;z-index:35;box-shadow:var(--shadow);max-width:300px"></div>
+<script src="assets/app.js?v=2"></script>
+
+<script>
+const current = location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('[data-nav]').forEach(a => { if(a.dataset.nav === current) a.classList.add('active'); });
+</script></body></html>

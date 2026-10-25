@@ -1,0 +1,24 @@
+[Unit]
+Description=Ameen Learning Platform Node.js server
+After=network.target
+
+[Service]
+Type=simple
+User=ameen
+Group=ameen
+WorkingDirectory=/opt/ameen/app
+EnvironmentFile=/etc/ameen-learning-platform.env
+ExecStart=/usr/bin/node /opt/ameen/app/server.js
+Restart=on-failure
+RestartSec=5
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+ReadWritePaths=/var/lib/ameen-learning-platform/data /var/lib/ameen-learning-platform/uploads
+
+[Install]
+WantedBy=multi-user.target

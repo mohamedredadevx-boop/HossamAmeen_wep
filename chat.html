@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#faf9f2"><meta name="description" content="تواصل مع طلاب ومدرسي منصة مستر حسام أمين في الشات الجماعي."><meta property="og:title" content="الشات الجماعي | منصة مستر حسام أمين"><meta property="og:description" content="تواصل مع طلاب ومدرسي منصة مستر حسام أمين في الشات الجماعي."><meta property="og:type" content="noindex"><meta property="og:locale" content="ar_EG"><meta name="robots" content="noindex, nofollow"><title>الشات الجماعي | منصة مستر حسام أمين</title><link rel="stylesheet" href="assets/bootstrap.min.css"><link rel="icon" type="image/jpeg" href="assets/platform-logo.jpeg"><link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header class="topbar container">
+  <div class="nav">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/platform-logo.jpeg" alt="شعار منصة مستر حسام أمين"><span>مستر حسام أمين<small>بوابتك للتفوق</small></span></a>
+    <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="القائمة الرئيسية">
+      <a href="index.html" data-nav="index.html">الرئيسية</a>
+      <a href="courses.html" data-nav="courses.html">الكورسات</a>
+      <a href="lessons.html" data-nav="lessons.html">المحاضرات</a>
+      <a href="exams.html" data-nav="exams.html">الامتحانات</a>
+      <a href="about.html" data-nav="about.html">من نحن</a>
+      <a href="contact.html" data-nav="contact.html">تواصل معنا</a>
+    </nav>
+    <div class="nav-actions"><button class="icon-btn" id="darkToggle" aria-label="الوضع الليلي">☾</button><button class="icon-btn" id="langToggle" aria-label="تغيير اللغة">EN</button><a class="btn btn-primary" href="login.html">دخول الطلاب ↗</a></div>
+  </div>
+</header>
+<main class="container chat-page">
+  <section class="page-heading"><div class="breadcrumbs"><a href="index.html">الرئيسية</a> / الشات العام</div><h1>الشات العام</h1><p class="lead">مساحة تجمع طلاب ومدرسي وإدارة المنصة. اكتب رسالة أو رد على رسالة أحد المشاركين.</p></section>
+  <section class="chat-shell content-card" aria-label="محادثة المنصة">
+    <div class="chat-toolbar"><div><b id="chatGroupTitle">محادثة المرحلة</b><p id="chatConnectionStatus" role="status">جارٍ الاتصال...</p></div><label class="field chat-group-picker"><span class="visually-hidden">اختر مجموعة المرحلة</span><select id="chatGroupSelect" aria-label="مجموعة الصف"><option value="first-secondary">الأول الثانوي</option><option value="second-secondary">الثاني الثانوي</option><option value="third-secondary">الثالث الثانوي</option></select></label><div id="chatAdminTools" hidden><button class="btn btn-soft" id="chatClearGroup" type="button">مسح المجموعة</button><button class="btn btn-soft" id="chatClearAll" type="button">مسح كل الرسائل</button></div><span class="pill">عام</span></div>
+    <button class="btn btn-soft chat-load-older" id="chatLoadOlder" type="button" hidden>تحميل رسائل أقدم</button>
+    <div class="chat-messages" id="chatMessages" aria-live="polite" aria-relevant="additions text"></div>
+    <form class="chat-composer" id="chatComposer">
+      <div class="chat-reply-bar" id="chatReplyBar" hidden><span id="chatReplyLabel"></span><button class="text-action" id="chatCancelReply" type="button">إلغاء الرد</button></div>
+      <div class="notice" id="chatFormNotice" hidden></div>
+      <div class="chat-attachment-tools"><input id="chatImageInput" type="file" accept="image/png,image/jpeg,image/webp" hidden><input id="chatVideoInput" type="file" accept="video/mp4,video/webm" hidden><button class="btn btn-soft" id="chatChooseImage" type="button">إرفاق صورة</button><button class="btn btn-soft" id="chatChooseVideo" type="button">إرفاق فيديو</button><button class="btn btn-soft" id="chatRecordAudio" type="button">بدء التسجيل الصوتي</button><button class="btn btn-soft" id="chatStopAudio" type="button" hidden>إيقاف التسجيل</button><label class="chat-question-toggle"><input id="chatIsQuestion" type="checkbox"> تمييز الرسالة كسؤال</label><span id="chatAttachmentStatus" role="status"></span></div>
+      <label class="field" for="chatInput"><span>رسالتك</span><textarea id="chatInput" name="text" rows="3" maxlength="1000" placeholder="اكتب رسالة أو أرفق صورة أو فيديو أو تسجيلاً صوتيًا..."></textarea></label>
+      <div class="chat-composer-footer"><small id="chatCounter">0/1000</small><button class="btn btn-primary" id="chatSendButton" type="submit">إرسال الرسالة ↗</button></div>
+    </form>
+  </section>
+</main>
+<footer class="footer"><div class="container footer-inner"><div>© <span id="year">2026</span> مستر حسام أمين — جميع الحقوق محفوظة</div><div class="footer-links"><a href="courses.html">الكورسات</a><a href="about.html">عن المنصة</a><a href="contact.html">تواصل معنا</a><a href="login.html">دخول الطلاب</a></div></div></footer>
+<div id="toast" class="notice" style="position:fixed;bottom:90px;left:22px;z-index:35;box-shadow:var(--shadow);max-width:300px"></div>
+<script src="assets/app.js"></script>
+<script>document.querySelector('[data-nav="chat.html"]')?.classList.add('active');</script>
+</body>
+</html>

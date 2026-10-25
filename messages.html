@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf9f2">
+  <meta name="description" content="أرسل واستقبل رسائل خاصة مع حسابات منصة مستر حسام أمين."><meta property="og:title" content="الرسائل الخاصة | منصة مستر حسام أمين"><meta property="og:description" content="أرسل واستقبل رسائل خاصة مع حسابات منصة مستر حسام أمين."><meta property="og:type" content="noindex"><meta property="og:locale" content="ar_EG"><meta name="robots" content="noindex, nofollow">
+  <title>الرسائل الخاصة | منصة مستر حسام أمين</title>
+  <link rel="stylesheet" href="assets/bootstrap.min.css"><link rel="icon" type="image/jpeg" href="assets/platform-logo.jpeg"><link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar container">
+  <div class="nav">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/platform-logo.jpeg" alt="شعار منصة مستر حسام أمين"><span>مستر حسام أمين<small>بوابتك للتفوق</small></span></a>
+    <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="القائمة الرئيسية">
+      <a href="index.html">الرئيسية</a>
+      <a href="courses.html">الكورسات</a>
+      <a href="chat.html">الشات العام</a>
+    </nav>
+    <div class="nav-actions"><button class="icon-btn" id="darkToggle" aria-label="الوضع الليلي">☾</button><button class="icon-btn" id="langToggle" aria-label="تغيير اللغة">EN</button><a class="btn btn-primary" href="login.html">دخول الطلاب ↗</a></div>
+  </div>
+</header>
+<main class="container private-messages-page">
+  <section class="page-heading"><div class="breadcrumbs"><a href="index.html">الرئيسية</a> / الرسائل الخاصة</div><h1>الرسائل الخاصة</h1><p class="lead">تواصل مباشرة مع أي حساب مسجل في المنصة.</p></section>
+  <div class="private-messages-layout">
+    <aside class="content-card private-contacts">
+      <label class="field"><span>بحث عن حساب</span><input id="privateUserSearch" type="search" placeholder="اكتب اسم الحساب..."></label>
+      <div id="privateUserList" class="private-user-list" aria-label="الحسابات"></div>
+    </aside>
+    <section class="content-card private-thread" aria-label="المحادثة الخاصة">
+      <div class="private-thread-head"><b id="privateThreadTitle">اختر حسابًا لبدء المحادثة</b><span id="privateThreadStatus" role="status"></span></div>
+      <div id="privateMessages" class="private-message-list" aria-live="polite"></div>
+      <form id="privateMessageForm" class="private-composer" hidden>
+        <div class="notice" id="privateMessageNotice" hidden></div>
+        <div class="chat-attachment-tools"><input id="privateAttachmentInput" type="file" accept="image/png,image/jpeg,image/webp,video/mp4,video/webm,audio/webm,audio/mp4,audio/ogg,audio/wav,audio/mpeg" hidden><button class="btn btn-soft" id="privateChooseAttachment" type="button">إرفاق صورة أو فيديو أو صوت</button><span id="privateAttachmentStatus" role="status"></span></div>
+        <label class="field" for="privateMessageInput"><span>رسالتك</span><textarea id="privateMessageInput" maxlength="2000" rows="3" placeholder="اكتب رسالتك الخاصة..."></textarea></label>
+        <div class="private-composer-footer"><small id="privateMessageCounter">0/2000</small><button class="btn btn-primary" id="privateSendButton" type="submit">إرسال الرسالة ↗</button></div>
+      </form>
+    </section>
+  </div>
+</main>
+<footer class="footer"><div class="container footer-inner"><div>© <span id="year">2026</span> مستر حسام أمين — جميع الحقوق محفوظة</div><div class="footer-links"><a href="courses.html">الكورسات</a><a href="chat.html">الشات العام</a><a href="contact.html">تواصل معنا</a></div></div></footer>
+<div id="toast" class="notice" style="position:fixed;bottom:90px;left:22px;z-index:35;box-shadow:var(--shadow);max-width:300px"></div>
+<script src="assets/app.js"></script>
+<script>document.querySelector('[data-role-link="messages.html"]')?.classList.add('active');</script>
+</body>
+</html>
